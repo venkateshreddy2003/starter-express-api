@@ -7,5 +7,6 @@ const password = process.env.password ?? "unp";
 app.all("/", (req, res) => {
   console.log("Just got a request!");
   res.send(`Yo! ${username}   ${password}`);
+  res.send(JSON.stringify(process.env));
 });
 app.listen(process.env.PORT || 3000);
