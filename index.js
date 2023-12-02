@@ -6,6 +6,6 @@ const username = process.env.username ?? "unu";
 const password = process.env.password ?? "unp";
 app.all("/", (req, res) => {
   console.log("Just got a request!");
-  res.send(process.env);
+  res.send(process.env.key1 + " " + process.env.key2);
 });
 app.listen(process.env.PORT || 3000);
